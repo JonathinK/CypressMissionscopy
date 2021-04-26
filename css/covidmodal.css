@@ -75,12 +75,14 @@ body.noScroll{
     position: absolute;
     top:40px;
     right:30px;
+    z-index:13;
     width:3em;
     height:.6em;
     background:black;
     transform: rotate(135deg);
     cursor: pointer;
     transition: opacity 1s ease-in-out;
+    pointer-events: all;
 }
 .menu_close:before{
     content:'';
