@@ -1,0 +1,23 @@
+@import "nav.css";
+@import "covidmodal.css";
+@import "footer.css";
+
+:root{
+  --primary-clr:#fafafa;
+  --secondary-clr:#f4f2e4;
+  --accent-clr:#FFD43B;
+  --covid-btn:#FF0000;
+  
+  --primary-fnt:forma-djr-micro, sans-serif;
+  --secondary-ftn:six-hands-chalk, sans-serif;
+  --accent-ftn:futura-pt-condensed, sans-serif;
+}
+
+*,
+*::after,
+*:before{
+    box-sizing: border-box;
+}
+
+body,html,*{margin:0; padding:0;font-family:var(--primary-fnt);}
+

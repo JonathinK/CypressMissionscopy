@@ -1,0 +1,365 @@
+/*General Styles Used Whether Desktop or Mobile*/
+body.noScroll{
+    overflow-y: hidden;
+}
+/*Banner*/
+.project_banner{
+    width:100%;
+    height:40vh;
+    position: relative;
+}
+/*Banner Images*/
+.jersey{
+     background: url(../photos/large/jerseybanner.jpg) no-repeat center center;
+     background-size: cover;
+}
+.bahamas{
+    background: url(../photos/large/bahamasbanner.jpg) no-repeat center center;
+    background-size: cover;
+}
+.haiti{
+    background: url(../photos/large/haitibanner.jpg) no-repeat center center;
+    background-size: cover; 
+}
+.southdakota{
+    background: url(../photos/large/sdbanner.jpg) no-repeat center center;
+    background-size: cover; 
+}
+.england{
+    background: url(../photos/large/londonbanner.jpg) no-repeat center center;
+    background-size: cover;  
+}
+.pa{
+    background: url(../photos/large/pabanner.jpg) no-repeat center center;
+    background-size: cover;    
+}
+.bulgaria{
+    background: url(../photos/large/bulgariabanner.jpg) no-repeat center center;
+    background-size: cover;  
+}
+.puertorico{
+    background: url(../photos/large/puertoricobanner.jpg) no-repeat center center;
+    background-size: cover;  
+}
+/*Title Wrap For Banner*/
+.title_wrap{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.title_wrap h1{
+    color:white; 
+    text-shadow: 0px 0px 10px rgba(0,0,0,.7);
+}
+/*Back Trigger*/
+.back{
+    height:auto;
+    width:50%;
+    position: absolute;
+    top:120px;
+    left:0;
+    padding-left:50px;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.back p{
+    font-size:2.5em;
+    font-weight:500;
+    color:white;
+    text-shadow: 0px 0px 5px rgba(0,0,0,.9);
+}
+
+.back a{
+    text-decoration: none;
+    color:white;
+}
+
+/*Text Summary*/
+.text_summary{
+    height:auto;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--primary-clr) url(../photos/large/so-white.png);
+    padding:4em;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.2));
+}
+.summary_wrap{
+    width:80%;
+}
+.summary_wrap h2{
+    height:100px;
+    font-size:3.5em;
+    font-weight:200;
+    font-family:var(--secondary-ftn);
+    text-decoration: underline 3px solid var(--accent-clr);
+}
+.summary_wrap h3{
+    font-size:2em;
+    padding-bottom:5px;
+}
+.summary_wrap h4{
+    font-size:1.6em;
+    font-weight:400;
+    padding-bottom:5px;
+}
+.summary_wrap p{
+    font-size:1.2em;
+}
+.text_summary p a{
+    text-decoration: none;
+    color:black;
+}
+/***********Video Sections************
+In these sections there may be specific 
+styles tailored to each page because not 
+every page has the same amount of videos.
+Also will include styles for iframes on 
+pages except main page.
+*************************************/
+
+.video_wrap{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background:var(--primary-clr) url(../photos/large/papyrus.png);
+    background-blend-mode: multiply;
+    width:100%;
+    height:auto;
+    padding: 40px 0px;
+    content-visibility: auto;
+}
+.video_wrap video{
+    width:40em;
+    height:25rem;
+    object-fit:cover;
+    margin:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,.3);
+}
+/***********Iframe Styles*************/
+.iframe_container{
+    background:var(--secondary-clr) url(../photos/large/papyrus.png);
+    background-blend-mode: multiply;
+    height:auto;
+    width:100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:5em 0px;
+   
+}
+.iframe_wrap{
+   width:40%;
+   height:600px;
+   margin:30px 0px;
+   object-fit: cover;
+}
+.london_container{
+   padding:0px 0px 3em 0px;
+  
+}
+.iframe_wrap iframe{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+    border-radius:15px;
+}
+/***********Photos Section************/
+.img_container{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:auto;
+    background: var(--secondary-clr) url(../photos/large/papyrus.png);
+    background-blend-mode: multiply;
+    padding: 50px 0px;
+}
+.img__wrap{
+    width:14em;
+    height:12em;
+    box-shadow:0px 0px 10px 1px rgba(0,0,0,.2);
+    margin: 10px;
+    overflow: hidden;
+    content-visibility: auto;
+}
+.img__wrap img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+.img__wrap img:hover{
+    transform: scale(1.1);
+    filter:grayscale(100%) blur(1px);
+}
+/*---Modal Style---*/
+.image_modal{
+    background:rgba(0,0,0,.9);
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    transition: all .3s ease-in;
+    opacity:0;
+    pointer-events: none;
+}
+.image_modal.open{
+    opacity:1;
+    pointer-events: all;
+}
+.full_img{
+    max-width:90%;
+    max-height:90%;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.5);
+    transition: all .3s ease-in-out;
+}
+.full_img.open{
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.image_modal p{
+    color:white;
+    font-size:1.2em;
+    position:absolute;
+    bottom:5%;
+    left:50%;
+    transform: translate(-50%,-5%);
+}
+/*---Covid Quote---*/
+.covid_quote_wrap{
+    width: 100%;
+    height:auto;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding:50px 0px;
+}
+.covid_quote_wrap blockquote{
+    width:70%;
+    margin:2ems 0px;
+    font-size: 1.5em;
+    text-align: center;
+} 
+
+/*Desktop Styles/ Bigger Screens*/
+@media screen and (min-width:900px){
+    .title_wrap h1{
+        padding:0px 30px 20px 0px;
+        font-size:5em;
+    }
+}
+/*Smaller Screens and Mobile*/
+@media screen and (max-width:1500px){
+    .iframe_container{
+        flex-flow: column nowrap;
+    }
+    .iframe_wrap{
+        width:80%;
+    }
+}
+
+@media screen and (max-width:899px){ 
+    .title_wrap{
+        justify-content: center;
+    }
+    .title_wrap h1{
+        font-size: 4em;
+        padding:0px 0px 20px 0px;
+    }
+    .summary_wrap{
+        width:100%;
+    }
+    .text_summary h2{
+        font-size:2.5em;
+        height:90px;
+        text-align: center;
+    }
+    .text_summary h3{
+        font-size:1.5em;
+        text-align: center;
+    }
+    .text_summary h4{
+        text-align: center;
+    }
+    .text_summary p{
+        text-align: justify;
+    }}
+@media screen and (max-width:600px){
+    .iframe_wrap{
+        height:400px;
+    }
+}
+@media screen and (max-width:600px){
+    .full_img{
+        max-width:100%;
+    }
+}
+@media screen and (max-width:499px){
+    .project_banner{
+        height:50vh;
+    }
+    .title_wrap h1{
+        font-size: 3em;
+    }
+    .back{
+        padding-left:1em;
+        top:100px;
+    }
+    .back p{
+        font-size:2em;
+    }
+    .text_summary{
+        padding:4em 0px;
+    }
+    .text_summary h2{
+        font-size:2.5em;
+        width:100%;
+        height:70px;
+    }
+    .text_summary h3{
+        font-size:1.5em;
+    }
+    .text_summary h4{
+        font-size:1.5em;
+    }
+    .text_summary p{
+        font-size:1.1em;
+    }
+    .img__wrap{
+        width:8em;
+        height:8em;
+    }
+    .iframe_wrap{
+        height:300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,579 @@
+/*---Desktop----*/
+/*==Hero Section==*/
+.hero_section{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+    background: url(../photos/large/heroimage.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+.overlay{
+    grid-area: 1 / 1 / 6 / 8;
+    background:rgba(0,0,0,.3);
+    width:100%;
+    min-height:100vh;
+}
+.center_wrap{
+    grid-area: 3 / 2 / 5 / 8;
+}
+.hero_section h1{
+    font-size:6em;
+    font-weight:bolder;
+    display:flex;
+    justify-content:left;
+    align-items: center;
+    color:white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+.hero_section h2{
+    font-size:3em;
+    font-weight: bolder;
+    color:white;
+    text-shadow: 5px 5px 10px rgba(0,0,0,.5);
+   
+    position: relative; 
+}
+.hero_btn{
+    height:10%;
+    width:200px;
+    margin-top:20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5em;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+    background: var(--accent-clr) url(/photos/large/so-white.png);
+    background-size: cover;
+    background-blend-mode: multiply;
+
+}
+/*==Text Summary Section==*/
+.cypress_summary{
+    width:100%;
+    height:100vh;
+    background:url(../photos/large/textback.jpg) no-repeat center center;
+    background-size: cover;
+    display:flex;
+    flex-flow:row wrap;
+}
+.text_box{
+    position: relative;
+    background:var(--primary-clr);
+    width:50%;
+    height:50%;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.text_box h2{
+    position: relative;
+    font-family:var(--secondary-ftn);
+    font-size:3em;
+    font-weight:200;
+    text-rendering: optimizeLegibility;
+}
+.text_box p{
+    width:100%;
+    padding:0 10%;
+    text-align: center;
+    font-size: 1.3em;
+}
+.svg_box{
+    width:50%;
+    height:50%;
+}
+.svg_box svg{
+    width:100%;
+    height:100%;
+}
+/*==CardsSection==*/
+.projects_section{
+    width:100%;
+    height:auto;
+    display:grid;
+    grid-template-columns: repeat(7,auto);
+    grid-template-rows: repeat(12,auto);
+    overflow: hidden;
+}
+
+.top_container{
+    grid-area: 1 / 1 / 6 / 13; 
+    height:300px;
+    width:100%;
+    background:var(--primary-clr);
+}
+.bottom_container{
+    grid-area: 6 / 1 / 13 / 13;
+    height:100%;
+    width:100%;
+    background:var(--secondary-clr) url(../photos/large/papyrus.png);
+    background-blend-mode: multiply;
+}
+/*==Cards Container==*/
+.cards_container{
+    grid-area: 5 / 3 / 8 / 11;
+    width: 100%;
+    height:auto;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+.cards{
+    width:480px;
+    height:660px;
+    background:white url(../photos/large/so-white.png);
+    border-radius:10px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,.3);
+    overflow: hidden;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.image_wrap{
+    width:100%;
+    height:320px;
+}
+.image_wrap img{
+    height:100%;
+    width:100%;
+}
+.cards h3{
+    text-align: center;
+    padding:10px 0px 10px 0px;
+    font-size:2em;
+}
+.cards p{
+    width:80%;
+    font-size:1.2em;
+    text-align:justify;
+}
+.card_btn{
+    position: absolute;
+    bottom:2em;
+    width:30%;
+    height:6%;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 2px 10px 1px rgba(0,0,0,.3);
+    background-color: var(--accent-clr);
+    border: 0px;
+}
+.card_btn a{
+    font-size:1.6em;
+    text-decoration: none;
+    color:black;
+}
+
+/*==Upcoming Trips==*/
+.upcoming_trip{
+    grid-area: 9 / 5 / 12 / 9;
+    height:auto;
+    width:100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,.3);
+    background:var(--primary-clr) url(../photos/large/so-white.png);
+    overflow: hidden;
+    display:flex;
+    flex-flow:column wrap;
+    position: relative;
+    margin:10em 0em;
+}
+.corner_image{
+    height:350px;
+    width:350px;
+    position: absolute;
+    right:0;
+    bottom:0;
+    background:url(../photos/large/upcomingtrips.jpg) no-repeat center center;
+    background-size: cover;
+    clip-path: circle(65% at 78% 78%);
+}
+.upcoming_trip h2{
+    text-align: center;
+    text-decoration:underline 3px var(--accent-clr);
+    font-family: var(--secondary-ftn);
+    font-weight: 300;
+    font-size: 3em;
+    padding:10px 0px;
+}
+.desc_line p:nth-child(2){
+    width:70%;
+}
+.upcoming_trip div p:nth-of-type(odd){
+    padding-left:5em;
+    font-size: 1.5em;
+}
+.upcoming_trip div p:nth-of-type(even){
+    padding:.5em 0em .5em 5.8em;
+    font-size:1.3em;
+}
+.selector_wrap{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height:40px;
+    width:100%;
+    position: relative;
+    margin:3em 0em;
+    bottom:0;
+    filter:drop-shadow(0px 0px 5px rgba(0,0,0,.3));
+}
+.circle{
+    height:30px;
+    width:30px;
+    background:white;
+    clip-path: circle(50% at 50% 50%);
+    cursor:pointer;
+    margin:0px 20px;
+}
+#c1{
+    background:var(--accent-clr);
+}
+/*==DonationSection==*/
+.donate_section{
+    width:100%;
+    height:78vh;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: url(../photos/large/donate.jpg) no-repeat top center fixed;
+    background-size: cover;
+}
+.donate_section h2{
+    width:100%;
+    text-align: center;
+    margin-top:1.5em;
+    color:white;
+    font-size:3em;
+}
+.box{
+    width:50%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.box_btn{
+    width:300px;
+    height:150px;
+    border: 8px solid var(--primary-clr);
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.box_btn:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height:0%;
+    width:0%;
+    background: var(--primary-clr);
+    transition: all .2s ease-in-out;
+}
+
+.box_btn:hover:before{
+    animation: backIn .2s ease-in-out;
+    background: var(--primary-clr );
+    height:100%;
+    width:100%;
+}
+@keyframes backIn {
+    0%{
+        height:0;
+        width:0;
+    }
+    100%{
+        height:100%;
+        width:100%;
+    }
+}
+.box_btn p{
+    font-size:4em;
+    color:white;
+}
+.box_btn a{
+    display:none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+.box_btn:hover p{
+    display:none;
+}
+.box_btn:hover a{
+    display:block;
+    text-decoration: none;
+    color:black;
+    font-size:2.5em;
+}
+
+@media screen and (max-width:1500px){
+    .cards{
+        width:30%;
+    }
+    .upcoming_trip div p:nth-of-type(odd){
+        padding-left:1em;
+        font-size: 1.5em;
+    }
+    .upcoming_trip div p:nth-of-type(even){
+        padding:.5em 1.2em .5em 1.2em;
+        font-size:1.3em;
+    }
+    .desc_line p:nth-child(2){
+        width:100%;
+    } 
+    .corner_image{
+        display:none;
+    }
+}
+@media screen and (max-width:1150px){
+    .center_wrap{
+        grid-area: 3 / 1 / 6 / 8;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .center_wrap h2{
+        text-align: center;
+        padding:0px 10px;
+    }
+    .hero_btn{
+        height:2.5em;
+    }
+    
+    .projects_section{
+        width:100%;
+        height:auto;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(5,auto);
+        justify-content: center;
+        align-items: center;
+    }
+    .top_container{
+        grid-area: 1 / 1 / 4 / 2; 
+        height:100%;
+    }
+    .bottom_container{
+        grid-area: 4 / 1 / 6 / 2;
+        height:100%;
+    }
+    .cards_container{
+        grid-area: 1 / 1 / 5 / 2;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .cards{
+        width:480px;
+        height:640px;
+        margin:15px 0px 15px 0px;
+    }
+    .upcoming_trip{
+      display:flex;
+      grid-area: 5 / 1 / 6 / 2;
+      width:80%;
+      height:auto;
+      margin:10em auto;
+    }
+}
+@media screen and (max-width:950px){
+    .cypress_summary{
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        height:100vh;
+    }
+    .svg_box{
+        display:none;
+    }
+    .text_box{
+        width:100%;
+        height:auto;
+        padding:10% 0px; 
+        background:var(--primary-clr) url(../photos/large/so-white.png);
+        background-blend-mode: multiply;
+        filter:drop-shadow(0px 0px 10px rgba(0,0,0,.4));
+    }
+    .top_container{
+        height:100%;
+    }
+    .bottom_container{
+        height:100%;
+    }
+    .upcoming_trip{
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        width:90%;
+        height:auto;
+    }
+    .upcoming_trip div p:nth-of-type(odd){
+        padding:5px 0px 5px 0px;
+        font-size: 1.5em;
+    }
+    .upcoming_trip div p:nth-of-type(even){
+        padding:0px 20px 10px 20px;
+        font-size:1.3em;
+    }
+}
+@media screen and (max-width:810px){
+    .center_wrap h1{
+        font-size:5em;
+    }
+    .center_wrap h2{
+        font-size:2.5em;
+    }
+}
+@media screen and (max-width:650px){
+    .center_wrap h1{
+        font-size:4.5em;
+    } 
+    .center_wrap h2{
+        font-size:2em;
+    }
+    .donate_section{
+        width:100%;
+    }
+    .box{
+        width:100%;
+    }
+}
+@media screen and (max-width:560px){
+    .text_box{
+        padding:15% 0;
+    }
+
+    .text_box p{
+        width:100%;
+        padding:0px 5%;
+    }
+   
+    .projects_section{
+        grid-template-columns: auto;
+    }
+    .top_container{
+        grid-area: 1 / 1 / 4 / 2;
+        height:100%;
+    }
+    .bottom_container{
+        grid-area: 4 / 1 / 6/ 2;
+        height:100%;
+    }
+    .cards_container{
+        display:flex;
+        width:100%;
+    }
+    .cards{
+        width:80%;
+        height:35em;
+    }
+    .cards p{
+        font-size:1em;
+    }
+    .image_wrap{
+        width:100%;
+        height:50%;
+    }
+    .image_wrap img{
+        width:100%;
+        height:100%;
+    }
+    .card_btn{
+        position: absolute;
+        bottom:1em;
+        width:150px;
+        
+    }
+    .upcoming_trip{
+        grid-area:5 / 1 / 6 / 2;
+    }
+    .upcoming_trip h2{
+        font-size:2.3em;
+    }
+    .upcoming_trip div p:nth-of-type(odd){
+        font-size:1.3em;
+    } 
+    .upcoming_trip div p:nth-of-type(even){
+        font-size:1em;
+    }
+    .donate_section{
+        height:60vh;
+    }
+    .donate_section h2{
+        font-size:2em;
+        padding: 0px 10px;
+    }
+    .box_btn{
+        height:100px;
+        width:200px;
+    }
+    .box_btn p{
+        font-size:2.4em;
+    }
+    .box_btn:hover a{
+        font-size: 1.8em;
+    }
+}
+@media screen and (max-width:475px){
+    .center_wrap{
+        grid-area: 3 / 1 / 6 / 8;
+        justify-content: center;
+        align-items: center;
+    }
+    .center_wrap h1{
+        font-size:3em;
+    }
+    .center_wrap h2{
+        font-size:1.5em;
+    }
+    .hero_btn{
+        margin-top:1em ;
+        width:160px;
+        height:40px;
+    }
+    .donate_section h2{
+        font-size: 1.5em;
+        margin:0px;
+        padding-top:10px;
+    }
+    .box_btn{
+        width:50%;
+        height:70px;
+    }
+    .box_btn:hover a{
+        font-size:1.4em;
+    }
+    .cards{
+        height:30em;
+    }
+    .cards p{
+        font-size: 1em;
+        text-align: center;
+    }
+    .image_wrap{
+        height:40%;
+    }
+}
+/* @media screen and (max-height:1010px){
+    .center_wrap{
+        grid-area: 3 / 2 / 6 / 8;
+        justify-content: center;
+        align-items: center;
+    }
+} */
