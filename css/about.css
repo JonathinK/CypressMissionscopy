@@ -1,6 +1,6 @@
 /*Banner*/
 .banner{
-    min-height: 50vh;
+    height: 50vh;
     width:100%;
     position: relative;
 }
@@ -13,7 +13,7 @@
     background-size: cover;
 }
 .banner_title{
-    height:50vh;
+    height:100%;
     width:100%;
     margin-top:5em;
     z-index: 2;
@@ -122,8 +122,10 @@
 }
 .info_box{
     grid-area:1 / 2 / 2 / 3;
-    background: var(--primary-clr) url(../photos/large/so-white.png);
+    background:  url(../photos/large/so-white.png);
+    background-color: var(--primary-clr);
     background-blend-mode: multiply;
+    -webkit-background-blend-mode:multiply;
     border-radius:35px;
     box-shadow:0px 0px 10px rgba(0,0,0,.2);
 }
@@ -194,10 +196,14 @@
     }
 }
 @media screen and (max-width:499px){
-   .banner{
-       background: url(../photos/small/ourstorybannermobile.jpg) no-repeat top center;
+   .founder{
+       background: url(../photos/large/ourstorybanner.jpg) no-repeat top center;
        background-size: cover;
    }
+   .banner{
+       height:40vh;
+   }
+
    .banner_title{
        align-items: center;
    }
@@ -205,6 +211,9 @@
         font-size:3em;
         margin:0;
         padding:0;
+    }
+    .goal_itn_container div{
+        height:auto;
     }
     .about_summary h2,
     .info_box h2,
