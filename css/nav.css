@@ -293,6 +293,11 @@
       .nav_links > div{
         font-size: 2em;
       }
+      .dropDown{
+        background:none;
+        background-color: var(--secondary-clr);
+
+      }
       .dropDown.dropOpen{
         height:150px;
       }

@@ -218,6 +218,10 @@
         margin:0;
         padding:0;
     }
+    .info_panel{
+        background: none;
+        background-color: var(--secondary-clr);
+    }
     .goal_itn_container div{
         height:auto;
     }
@@ -230,5 +234,8 @@
     .info_box p,
     .goal_itn_container div p{
         font-size:1em;
+    }
+    .img_box{
+        margin:0;
     }
 }

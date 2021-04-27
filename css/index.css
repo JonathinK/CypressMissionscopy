@@ -542,7 +542,7 @@
 @media screen and (max-width:475px){
     .hero_section{
         background: url(../photos/large/heroimage.jpg);
-        background-attachment: initial;
+        background-attachment: fixed;
         background-position: center center;
         background-size: cover;
     }
@@ -562,9 +562,10 @@
         width:160px;
         height:40px;
     }
+  
     .text_box{
-        height:40%;
         padding:1em;
+        filter: none;
     }
     .text_box h2{
         font-size: 2em;
