@@ -357,15 +357,8 @@ pages except main page.
         height:300px;
         width:300px;
     }
+    .iframe_wrap iframe{
+        width: 100%;
+        height:100%;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
