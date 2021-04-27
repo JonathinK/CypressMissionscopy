@@ -43,18 +43,14 @@
     padding: 50px 0px;
 }
 .about_summary h2{
-    height:auto;
     font-size:3em;
     font-weight:300;
-    height:70px;
     font-family: var(--secondary-ftn);
-    text-decoration: underline 4px var(--accent-clr);
 }
 .about_summary p{
     width:75%;
     font-size:1.2em;
     text-align: justify;
-    padding-top:10px;
 }
 /*Goal and In The News Panel*/
 .goal_itn_container{
@@ -67,8 +63,8 @@
 }
 .goal_itn_container div {
     width:50%;
-    height:auto;
-    margin:5em 0px;
+    height:20vh;
+    margin:3em 0px;
     display:flex;
     flex-flow:column nowrap;
     justify-content: center;
@@ -78,7 +74,6 @@
     border-right:5px solid  black;
 }
 .goal_itn_container div h2{
-    text-decoration: underline 3px solid;
     font-family: var(--secondary-ftn);
     font-size:3em;
     font-weight:200;
@@ -133,7 +128,6 @@
     font-family:var(--secondary-ftn);
     font-size: 3em;
     font-weight:300;
-    text-decoration: underline solid 3px var(--accent-clr);
     padding: 5px 0px 0px 20px;
 }
 .info_box p{
