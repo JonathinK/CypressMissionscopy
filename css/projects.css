@@ -45,7 +45,8 @@
     flex-flow:row wrap;
     justify-content: space-evenly;
     align-items: center;
-    background: var(--secondary-clr) url(../photos/large/papyrus.png);
+    background: url(../photos/large/papyrus.png);
+    background-color: var(--secondary-clr);
     background-blend-mode: multiply;
     padding:0px 50px;
 }
@@ -119,6 +120,9 @@
     .projects_summary p{
         font-size:1em;
         text-align: center;
+    }
+    .projects_wrap{
+        background:var(--secondary-clr);
     }
     .projects_box{
         width: 350px;
