@@ -542,7 +542,7 @@
 @media screen and (max-width:475px){
     .hero_section{
         background: url(../photos/large/heroimage.jpg);
-        background-attachment: fixed;
+        background-attachment: initial;
         background-position: center center;
         background-size: cover;
     }

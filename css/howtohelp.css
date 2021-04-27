@@ -32,6 +32,7 @@ body.noScroll{
     background: url(../photos/large/papyrus.png);
     background-color:var(--secondary-clr) ;
     background-blend-mode: multiply;
+    mix-blend-mode: multiply;
     width:100%;
     height:auto;
     display:flex;
