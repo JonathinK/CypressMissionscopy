@@ -36,6 +36,7 @@
     width:100%;
     background: var(--primary-clr) url(../photos/large/so-white.png);
     background-blend-mode: multiply;
+    mix-blend-mode: multiply;
     display:flex;
     flex-flow:column nowrap;
     justify-content: flex-start;
@@ -50,12 +51,13 @@
 .about_summary p{
     width:75%;
     font-size:1.2em;
-    text-align: justify;
+    text-align: center;
 }
 /*Goal and In The News Panel*/
 .goal_itn_container{
     background:var(--secondary-clr) url(../photos/large/so-white.png);
     background-blend-mode: multiply;
+    mix-blend-mode: multiply;
     width:100%;
     height:auto;
     display:flex;
@@ -88,8 +90,10 @@
 .info_panel{
     width:100%;
     height:auto;
-    background:var(--secondary-clr) url(../photos/large/papyrus.png);
+    background:url(../photos/large/papyrus.png);
+    background-color:var(--secondary-clr);
     background-blend-mode: multiply;
+    mix-blend-mode: multiply;
     display:flex;
     flex-flow:row wrap;
     justify-content: flex-start;
