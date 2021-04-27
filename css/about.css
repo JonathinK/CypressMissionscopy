@@ -238,8 +238,6 @@
     .img_box{
         height:300px;
         width:300px;
-    }
-    .img_box img{
-    
+        margin:1em auto;
     }
 }
