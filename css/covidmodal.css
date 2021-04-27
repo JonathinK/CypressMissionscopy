@@ -177,10 +177,12 @@ body.noScroll{
         display:block;
         position: fixed;
         top:0;
+        left:0;
         background:var(--primary-clr) url(../photos/large/so-white.png);
         background-blend-mode: multiply;
         height:50px;
-        width:100%;
+        width:0%;
+        transition: all 1s ease-in-out;
     }
     .menu_close{
       top:25px;
