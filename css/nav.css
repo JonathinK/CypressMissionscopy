@@ -126,7 +126,7 @@
 @media screen and (max-width:799px){
     /*Mobile nav*/
     .nav_bar{
-      height:120px;
+      height:110px;
     }
     .logo_wrap{
       width:100%;
@@ -178,6 +178,7 @@
       position:fixed;
       top:0;
       right:0;
+      z-index: 11;
       width:0%;
       height:100vh;
       background: var(--primary-clr);
@@ -193,8 +194,8 @@
       width:2.5em;
       height:.5em;
       position: relative;
-      margin-left:85%;
-      margin-top:10%;
+      top:5%;
+      right:-85%;
       transform: rotate(135deg);
       cursor:pointer;
       border-radius:5px;

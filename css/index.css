@@ -573,7 +573,10 @@
         font-size:1em;
     }
     .donate_section{
-        background: url(../photos/large/donate.jpg) no-repeat top center fixed;
+        background: url(../photos/large/donate.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
         background-size: cover;
     }
     .donate_section h2{
