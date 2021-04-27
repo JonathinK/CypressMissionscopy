@@ -230,6 +230,7 @@ pages except main page.
     left:50%;
     transform:translate(-50%,-50%) scale(0.5);
     transition: all .3s ease-in-out;
+    image-rendering: optimizeSpeed;
 }
 .full_img.open{
     transform:translate(-50%,-50%) scale(1);
@@ -328,7 +329,7 @@ pages except main page.
         font-size:2em;
     }
     .text_summary{
-        padding:4em 0px;
+        padding:4em 1em;
     }
     .text_summary h2{
         font-size:2.5em;

@@ -243,7 +243,8 @@
       }
     }
     .dropDown{
-      background: var(--secondary-clr) url(../photos/large/papyrus.png);
+      background:  url(../photos/large/papyrus.png);
+      background-color:var(--secondary-clr);
       background-blend-mode: multiply;
       width:100%;
       top:0;
