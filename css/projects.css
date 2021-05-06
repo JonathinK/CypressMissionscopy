@@ -3,38 +3,47 @@
     width:100%;
     background:url(../photos/large/projects.jpg) no-repeat center center;
     background-size: cover;
-    content-visibility: auto;
-}
-.projects_title_wrap{
-    width:100%;
-    height:100%;
     display:flex;
     flex-flow: column;
     justify-content: flex-end;
-    align-items: center;
-    content-visibility: auto;
+    align-items: flex-start;
+}
+.projects_title_wrap{
+    width:auto;
+    height:auto;
+    margin-bottom:3em;
+    padding:0em 1.5em 0em 6em;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5); 
+    border-radius: 0px 5px 5px 0px;
+    border-top: 5px outset rgba(124, 124, 124, 0.4);
+    border-right: 5px outset rgba(124, 124, 124, 0.4);
+    border-bottom: 5px outset rgba(124, 124, 124, 0.4);
+    position: relative;
+    z-index: 1;
+    background: rgba(124, 124, 124, 0.287);
+    overflow: hidden;
 }
 .projects_title_wrap h1{
     font-size:5em;
     color:white;
-    text-shadow: 0px 0px 10px rgba(0,0,0,.6);
-    padding-bottom:10px; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.767);
 }
 /*********Projects Summary Text Styles***********/
 .projects_summary{
-    background: var(--primary-clr) url(../photos/large/so-white.png);
+    background: url(../photos/large/so-white.png);
+    background-color:var(--primary-clr) ;
     display:flex;
     flex-flow:column nowrap;
     justify-content: center;
     align-items: center;
     width:100%;
-    height:auto;
+    filter:drop-shadow(0px 5px 10px rgba(0,0,0,.2));
 }
 .projects_summary p{
     width:100%;
     text-align: center;
     letter-spacing: 1px;
-    font-size:18px;
+    font-size:1.2em;
     padding:5em 5em;
 }
 /************Project Box Styles******************/
@@ -95,17 +104,33 @@
     height:30%;
     background: rgba(0,0,0,.2);
 }
+@media screen and (min-width:1501px){
+    .projects_summary p{
+        width: 1412px;
+    }
+}
 @media screen and (max-width:1500px){
     .projects_wrap{
         padding:0px;
     }
 }
 @media screen and (max-width:600px){
+   .projects_banner{
+      justify-content: flex-end;
+      align-items: center;
+   }
+   .projects_title_wrap{
+      padding: .5em 1em;
+      margin-bottom:1em;
+   } 
+   .projects_title_wrap h1{
+     font-size:4em;
+   }
     .projects_summary p {
         padding:3em 3em;
     }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:499px){
     .projects_banner{
         height:20em;
     }
@@ -120,8 +145,12 @@
         background:var(--secondary-clr);
     }
     .projects_box{
-        width: 350px;
-        height:300px;
+        width:100%;
+        height:250px;
+    }
+    .projects_box img{
+      width:100%;
+      height:100%;
     }
     .projects_box h2{
         top:60%;

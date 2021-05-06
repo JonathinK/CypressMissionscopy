@@ -10,21 +10,30 @@ body.noScroll{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    display:flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .how_to_title{
-   width:100%;
-   height:100%;
-   display:flex;
-   flex-flow: column nowrap;
-   justify-content: flex-end;
-   align-items: center;
-   position: absolute;
-   z-index:1;
+    width:auto;
+    height:auto;
+    margin-bottom:3em;
+    padding:0em 1.5em 0em 6em;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5); 
+    border-radius: 0px 5px 5px 0px;
+    border-top: 5px outset rgba(124, 124, 124, 0.4);
+    border-right: 5px outset rgba(124, 124, 124, 0.4);
+    border-bottom: 5px outset rgba(124, 124, 124, 0.4);
+    position: relative;
+    z-index: 1;
+    background: rgba(124, 124, 124, 0.287);
+    overflow: hidden;
 }
 .how_to_title h1{
-    font-size:6em;
-    font-family:var(--accent-ftn);
+    font-size:5em;
     color:white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.767);
 }
 /*------Join Us Container------*/
 .form_wrap{
@@ -147,10 +156,12 @@ textarea{
     padding:0px 7em;
     text-align: center;
     font-size:1.2em;
-    text-align: left;
+    text-align: justify;
+    color:var(--font-clr);
 }
 .founder_quote p{
-    font-size:1.1em;
+    font-size:1.2em;
+    color:var(--font-clr);
 }
 .founder_quote p:nth-child(2){
     padding: 20px 0px 5px 0px;
@@ -188,13 +199,21 @@ textarea{
     }
 }
 @media screen and (max-width:600px){
+    .how_to_banner{
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .how_to_title{
+        padding:.5em 1em;
+        margin-bottom: 1em;
+    }
     .how_to_title h1{
-        font-size:4.5em;
+        font-size:3em;
     }
 }
 @media screen and (max-width:499px){
     .how_to_title h1{
-        font-size:2.5em;
+        font-size:2em;
     }
     .join_title h1{
         font-size:2em;
