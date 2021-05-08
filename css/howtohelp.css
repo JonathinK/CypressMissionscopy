@@ -187,6 +187,21 @@ textarea{
         width:100%;
     }
 } 
+@media screen and (max-width:800px){
+    .how_to_banner{
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .how_to_title{
+        padding:.5em 1em;
+        margin-bottom: 1em;
+        border-left: 5px outset rgba(124, 124, 124, 0.4);
+        border-radius: 5px 5px 5px 5px;
+    }
+    .how_to_title h1{
+        font-size:3em;
+    }
+}
 @media screen and (max-width:650px){
     .founder_quote blockquote{
      padding:0px 15px;
@@ -198,20 +213,11 @@ textarea{
         width:100%;
     }
 }
-@media screen and (max-width:600px){
-    .how_to_banner{
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .how_to_title{
-        padding:.5em 1em;
-        margin-bottom: 1em;
-    }
-    .how_to_title h1{
-        font-size:3em;
-    }
-}
+
 @media screen and (max-width:499px){
+    .form_wrap{
+        background-image: none;
+    }
     .how_to_title h1{
         font-size:2em;
     }
