@@ -100,6 +100,8 @@ form{
     height:100%;
     border:1px solid grey;
     box-shadow:0px 3px 5px rgba(0,0,0,.2);
+    -webkit-box-shadow:0px 3px 5px rgba(0,0,0,.2);
+    -webkit-appearance: none;
     border:none;
 }
 .field input:focus,
@@ -117,7 +119,9 @@ textarea{
     overflow-y: auto;
     scroll-behavior: smooth;
     outline:none;
-    box-shadow:0px 3px 5px rgba(0,0,0,.2); 
+    box-shadow:0px 3px 5px rgba(0,0,0,.2);  
+    -webkit-box-shadow:0px 3px 5px rgba(0,0,0,.2); 
+    -webkit-appearance: none; 
     border:none;
 }
 /*------Form Input Btn Style------*/
