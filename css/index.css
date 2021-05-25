@@ -7,8 +7,7 @@
   background-attachment: fixed;
   background-size: cover;
   width:100%;
-  min-height:calc(100vh - 90px);
-  margin-top:90px;
+  min-height:100vh;
   display:grid;
   grid-template-columns: 10% 80% 10%;
   grid-template-rows:10% 80% 10%;
@@ -25,24 +24,25 @@
   flex-flow: column nowrap;
   justify-content:center;
   align-items:flex-start;
-  color:white;
 }
 .center_wrap h1{
   font-size:8em;
   position: relative;
+  color:white;
 }
 .center_wrap h1::before{
   content: '';
   display:block;
   position: absolute;
   left:0;
-  bottom:25px;
+  bottom:20px;
   width:100%;
   border-bottom: 8px solid  var(--accent-clr);
   border-radius: 5px;
 }
 .center_wrap h2{
   font-size: 4em;
+  color:white;
 }
 .hero_btn{
   margin-top:2em;
@@ -53,7 +53,8 @@
   box-shadow: 2px 2px 10px rgba(0,0,0,.3);
 }
 .hero_btn p{
-  font-size:1.5em;
+  font-size:2em;
+  color:black;
 }
 /*--Projects Section--*/
 .projects_section{
@@ -62,7 +63,8 @@
 }
 .cards_container{
   height:auto;
-  width:100%;
+  width:min(1500px,90%);
+  margin:0 auto;
   display:flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -77,14 +79,19 @@
   background-blend-mode: multiply;
   background-color: white;
   position: relative;
-  width:500px;
-  height:750px;
-  margin:3.1em 0em;
+  width:435px;
+  height:729px;
+  margin:3.1em .5em;
   box-shadow: 0px 0px 20px rgba(0,0,0,.3);
+  transition: .5s ease-in-out;
+}
+.cards:hover{
+  transform: translateY(-20px);
+  transition: .5s ease-in-out;
 }
 .image_wrap{
   width:100%;
-  height:350px;
+  height:348px;
 }
 .image_wrap img{
   width:100%;
@@ -97,10 +104,8 @@
 .cards p{
   padding:0px 1em;
   margin-top: 1em;
-  font-size:1.2em;
   line-height: 1.5em;
   text-align: justify;
-  color:var(--font-clr);
 }
 .card_btn{
   position: absolute;
@@ -119,49 +124,81 @@
 }
 
 /*--How we and Who We--*/
-.cypress_summary{
-    width:100%;
-    height:100vh;
-    background:url(../photos/large/southdakota1large.jpg);
-    background-repeat: no-repeat; 
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    display:flex;
-    flex-flow:row wrap;
+.cypress_info_background{
+  width: 100%;
+  height:auto;
+  display:flex;
+  flex-flow:column nowrap;
+  align-items: center;
+  background-image: url(../photos/large/cypressinfo.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  scroll-margin-top: 90px;
 }
-.text_box{
-    position: relative;
-    background:white;
-    width:50%;
-    height:50%;
-    display:flex;
-    flex-flow:column nowrap;
-    justify-content: center;
-    align-items: center;
+.cypress_info{
+  width:min(1500px,85%);
+  background-color:white;
 }
-.text_box h2{
-    font-family:var(--secondary-ftn);
-    font-size:4em;
-    font-weight:200;
-    text-rendering: optimizeLegibility;
+.cypress_info h2{
+  margin-top:100px;
+  text-align: center;
+  
 }
-.text_box p{
-    width:100%;
-    padding:0 10%;
-    text-align: center;
-    font-size: 1.3em;
-    line-height: 2em;
-    color:var(--font-clr);
+.hww_section{
+  width: 100%;
+  height: auto;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
-.svg_box{
-    width:50%;
-    height:50%;
+.hww_section h3,
+.hwlf_section h3{
+  margin-top:90px;
+  font-family:var(--secondary-ftn);
+  font-weight: 600;
 }
-.svg_box svg{
-    width:100%;
-    height:100%;
+.info_card_wrap{
+  width:100%; 
+  height:auto;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-evenly;
 }
+.info_card{
+  width:267px;
+  display:flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top:1em;
+}
+.info_card img{
+ width:100%;
+}
+.info_card h4{
+  padding-bottom: 5px;
+}
+.info_card p{
+  text-align: center;
+}
+.hwlf_section{
+  width:100%;
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items:center;
+}
+.hwlf_section h4{
+  color:red;
+  font-size:1.6rem;
+}
+.hwlf_section p:nth-child(3){
+  width:min(900px, 90%);
+  text-align:center;
+  margin-bottom:90px;
+}
+
 /* Upcoming Trips */
 .upcoming_trip_wrap{
   width:100%;
@@ -184,7 +221,7 @@
   justify-content: flex-start;
   background-image: url(../photos/large/so-white.png);
   background-blend-mode: multiply;
-  background-color: white;
+  background-color:var(--primary-clr);
   box-shadow: 0px 0px 10px rgba(0,0,0,.3);
 }
 .corner_image{
@@ -199,10 +236,9 @@
 }
 .upcoming_trip h2{
     text-align: center;
-    font-family: var(--secondary-ftn);
-    font-weight: 300;
-    font-size: 3em;
-    padding:10px 0px;
+    font-weight: 400;
+    padding-bottom:10px;
+    margin-top:1em;
 }
 .desc_line p:nth-child(2){
     width:70%;
@@ -210,11 +246,11 @@
 .upcoming_trip div p:nth-of-type(odd){
     padding-left:5em;
     font-size: 1.5em;
+    color:black;
 }
 .upcoming_trip div p:nth-of-type(even){
     padding:.5em 0em .5em 5.8em;
     font-size:1.3em;
-    color:var(--font-clr);
 }
 .selector_wrap{
     display: flex;
@@ -224,7 +260,7 @@
     height:40px;
     width:100%;
     position: relative;
-    bottom:-120px;
+    bottom:-100px;
     filter:drop-shadow(0px 0px 5px rgba(0,0,0,.3));
 }
 .circle{
@@ -312,6 +348,7 @@
 .box_btn p{
     font-size:4em;
     color:white;
+    text-shadow: 0px 0px 5px rgba(0,0,0,.3);
 }
 .box_btn a{
     display:none;
@@ -334,10 +371,8 @@
     width:1920px;
   }
   .cards_container{
-    width:1920px;
     justify-content: space-evenly;
     align-items: center;
-    margin:0 auto;
   }
 }
 
@@ -413,7 +448,7 @@
     grid-area: 2 / 1 / 4 / 4;
   }
   .center_wrap h1{
-    font-size:5em;
+    font-size:5.5em;
   }
   .center_wrap h2{
     font-size:3em;
@@ -456,10 +491,28 @@
 }
 }
 
-
+/*Mobile Devices*/
+@media screen and (width:768px) and (height:1024px){
+  .hero_section{
+    background-attachment:  initial;
+  }
+  .center_wrap h1{
+    font-size: 4.5em;
+  }
+  .center_wrap h1::before{
+    bottom:7px;
+  }
+  .cypress_info_background{
+    background-attachment: initial;
+  }
+  .donate_section{
+    background-attachment: initial;
+  }
+}
 @media screen and (max-width:499px){
  /* hero */
   .hero_section{
+   background-image: url(../photos/small/heroimagesmall.jpg);
    background-attachment: initial;
    background-position: top top;
    min-height:100vh;
@@ -487,15 +540,15 @@
  }
  /* Projects Cards */
  .cards_container{
-  padding:1.5em 0em;
+  margin:auto;
  }
  .cards{
-   width:90%;
+   width:307px;
    height:650px;
    margin:1.5em 0em;
  }
  .image_wrap{
-   height:300px;
+   height:246px;
  }
  .cards p{
    font-size:1em;
@@ -505,37 +558,31 @@
    height:50px;
  }
  /* Text Summary*/
- .cypress_summary{
-  height:auto;
-  flex-flow:column nowrap; 
-  justify-content:center;
-  background-attachment: initial; 
+ .cypress_info_background{
+   background:none;
  }
- .text_box{
+ .cypress_info{
    width:100%;
-   height:auto;
-   padding:1em;
  }
- .tb_1{
-   margin:90px 0px 1em 0px;
+ .cypress_info h2{
+   font-size:2.5rem;
  } 
- .tb_2{
-   margin:1em 0 90px 0;
+ .cypress_info h3{
+   font-size:2rem;
  }
- .text_box h2{
-   font-size:2em;
-   height:60px;
-   width:100%;
-   text-align: center;
+ .info_card h4{
+   font-size:1.5rem;
  }
- .text_box p{
-   font-size:1em;
-   line-height: 1.5em;
-   padding:0;
+ .info_card p{
+   font-size:1rem;
  }
-.svg_box{
-  display:none;
-}
+ .hwlf_section h4{
+   font-size:1.4rem;
+ }
+ .hwlf_section p{
+   font-size:1rem;
+ }
+ 
  /* upcoming trip*/
  .upcoming_trip{
    width:90%;

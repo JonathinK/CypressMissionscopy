@@ -5,7 +5,7 @@ body.noScroll{
 /*Banner*/
 .project_banner{
     width:100%;
-    min-height:50vh;
+    min-height:60vh;
     position: relative;
     display:flex;
     flex-flow: column;
@@ -62,7 +62,7 @@ body.noScroll{
     overflow: hidden;
 }
 .title_wrap h1{
-    font-size:5em;
+    font-size:6em;
     color:white;
     margin:0 .5em 0 1em;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.767);
@@ -81,16 +81,12 @@ body.noScroll{
     align-items: center;
 }
 
-.back p{
-    font-size:2.5em;
-    font-weight:500;
-    color:white;
-    text-shadow: 0px 0px 5px rgba(0,0,0,.9);
-}
-
 .back a{
     text-decoration: none;
     color:white;
+    font-size:3rem;
+    font-weight:500;
+    text-shadow: 0px 0px 5px rgba(0,0,0,.9);
 }
 
 /*Text Summary*/
@@ -100,7 +96,7 @@ body.noScroll{
     display:flex;
     justify-content: center;
     align-items: center;
-    background:var(--primary-clr) url(../photos/large/so-white.png);
+    background: white url(../photos/large/so-white.png);
     padding:4em;
     filter: drop-shadow(0px 0px 10px rgba(0,0,0,.2));
 }
@@ -108,10 +104,8 @@ body.noScroll{
     width:80%;
 }
 .summary_wrap h2{
-    height:100px;
+    height:auto;
     font-size:3.5em;
-    font-weight:200;
-    font-family:var(--secondary-ftn);
 }
 .summary_wrap h3{
     font-size:2em;
@@ -119,19 +113,20 @@ body.noScroll{
 }
 .summary_wrap h4{
     font-size:1.6em;
-    font-weight:400;
     padding-bottom:5px;
 }
 .summary_wrap p{
     font-size:1.2em;
-    color:var(--font-clr);
 }
+
 .text_summary p a{
     text-decoration: none;
     color:black;
+    font-weight:600;
 }
-strong{
-    color:black;
+.text_summary p a:hover{
+    text-decoration: underline;
+    color:blue;
 }
 /***********Video Sections************
 In these sections there may be specific 
@@ -163,7 +158,7 @@ pages except main page.
 }
 /***********Iframe Styles*************/
 .iframe_container{
-    background:var(--secondary-clr) url(../photos/large/papyrus.png);
+    background:var(--primary-clr) url(../photos/large/papyrus.png);
     background-blend-mode: multiply;
     height:auto;
     width:100%;
@@ -182,7 +177,8 @@ pages except main page.
 }
 
 .london_container{
-   padding:0px 0px 3em 0px;
+   margin:0;
+   padding:0;
 }
 
 .iframe_wrap iframe{
@@ -204,7 +200,7 @@ pages except main page.
     align-items: center;
     width:100%;
     height:auto;
-    background: var(--secondary-clr) url(../photos/large/papyrus.png);
+    background: var(--primary-clr) url(../photos/large/papyrus.png);
     background-blend-mode: multiply;
     padding: 50px 0px;
 }
@@ -221,7 +217,7 @@ pages except main page.
     width:100%;
     object-fit: cover;
     object-position: center;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     cursor: pointer;
 }
 .img__wrap img:hover{
@@ -230,6 +226,9 @@ pages except main page.
 }
 /*---Modal Style---*/
 .image_modal{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background:rgba(0,0,0,.9);
     position:fixed;
     height:100%;
@@ -237,7 +236,7 @@ pages except main page.
     top:0;
     left:0;
     z-index:1000;
-    transition: all .3s ease-in;
+    transition: all .3s ease-in-out;
     opacity:0;
     pointer-events: none;
 }
@@ -248,15 +247,15 @@ pages except main page.
 .full_img{
     max-width:90%;
     max-height:90%;
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%) scale(0.5);
-    transition: all .3s ease-in-out;
-    image-rendering: optimizeSpeed;
+    display:block;
+    margin:auto;
+    image-rendering: optimizeQuality;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
 }
 .full_img.open{
-    transform:translate(-50%,-50%) scale(1);
+    transform: scale(1);
+    transition: transform 1s ease-in-out;
 }
 
 .image_modal p{
@@ -283,7 +282,12 @@ pages except main page.
     font-size: 1.5em;
     text-align: center;
 } 
-
+.covid_quote_wrap q{
+    color:var(--readingFont-clr);
+}
+.covid_quote_wrap p{
+    font-size:1.3rem;
+}
 /*Desktop Styles/ Bigger Screens*/
 @media screen and (min-width:1501px){
     .text_summary{
@@ -360,16 +364,16 @@ pages except main page.
         padding-left:1em;
         top:100px;
     }
-    .back p{
-        font-size:2em;
+    .back a{
+        font-size:2rem;
     }
     .text_summary{
-        padding:4em 1em;
+        padding:3em 1em;
     }
     .text_summary h2{
-        font-size:2.5em;
+        font-size:2em;
         width:100%;
-        height:70px;
+        height:50px;
     }
     .text_summary h3{
         font-size:1.5em;
@@ -381,7 +385,7 @@ pages except main page.
         font-size:1.1em;
     }
     .img_container{
-        background:var(--secondary-clr);
+        background:var(--primary-clr);
     }
     .img__wrap{
         width:8em;
@@ -389,7 +393,7 @@ pages except main page.
     }
     .iframe_wrap{
         height:300px;
-        width:300px;
+        width:90%;
     }
     .iframe_wrap iframe{
         width: 100%;
