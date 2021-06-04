@@ -450,8 +450,8 @@
 }
 @media screen and (max-width:768px){
   .hero_section{
-    background-image: url(../photos/large/heroimage.jpg) no-repeat;
-    background-position: center center;
+    background-image: url(../photos/small/heroimagesmall.jpg) no-repeat;
+    background-position: top center;
     background-size: cover;
     background-attachment: initial;
   }
