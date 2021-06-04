@@ -287,7 +287,7 @@
   background: url(../photos/large/donate.jpg) no-repeat top center fixed;
   background-size: cover;
 }
-.donate_text{
+.donate_text{ 
   width:100%;
   text-align: center;
 }
@@ -448,7 +448,13 @@
     width:425px;
   }
 }
-@media screen and (max-width:750px){
+@media screen and (max-width:768px){
+  .hero_section{
+    background-image: url(../photos/large/heroimage.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: initial;
+  }
   .center_wrap{
     justify-content: flex-end;
     align-items: center;
