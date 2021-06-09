@@ -78,7 +78,6 @@
     }
     .sec2 p{
         width:100%;
-        font-size:16px;
         margin-bottom:1em;
     }
     .covid_iframe{
@@ -96,13 +95,18 @@
         height:auto;
         margin:2em 0;
     }
-    .sec3 div > p{
-        font-size: 16px;
-    }
+    
 }
 @media screen and (max-width:499px){
     .sec1{
         height:150px;
         padding:50px 0px 0px 0px;
+    }
+    .sec2 p{
+        width:100%;
+        font-size:16px;
+    }
+    .sec3 div > p{
+        font-size: 16px;
     }
 }
