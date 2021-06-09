@@ -42,21 +42,7 @@ closeNav.addEventListener('click', () => {
     link6.classList.remove("slide");
  });
 
-//If covid link is clicked then nav menu closes//
-covidLink.addEventListener('click', () =>{
-    mobileMenu.classList.remove("menuOpen");
-    mobileMenu.style.transition = "width .6s ease-in-out";
-    closeNav.style.opacity = ("0");
-    closeNav.style.transition = ("opacity .3s ease-out");
-    closeNav.style.pointerEvents = ("none");
-    body.classList.remove("noScroll");
-    link1.classList.remove("slide");
-    link2.classList.remove("slide");
-    link3.classList.remove("slide");
-    link4.classList.remove("slide");
-    link5.classList.remove("slide");
-    link6.classList.remove("slide");
-});
+
 //Removes any styles that would cause awkward pre animations on resizing//
 window.addEventListener("resize", () => {
     if(window.innerWidth < 768){

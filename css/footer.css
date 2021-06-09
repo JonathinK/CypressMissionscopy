@@ -6,7 +6,6 @@ footer{
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items:center;
-    background:var(--primary-clr);
 }
 footer p{
     font-size: 1.1rem;
